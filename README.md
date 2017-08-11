@@ -4,7 +4,7 @@ This repo is an example of `git clone` vulnerability described in http://blog.re
 
 To see it in action, simply clone the repo using:
 ```
-git clone git@github.com:disconnect3d/git_clone_rce_calc.git --recursive
+git clone https://github.com/disconnect3d/git_clone_rce_calc.git --recursive
 ```
 The recursive part is crucial as git **must** try to clone the malicious git submodule url.
 This will launch a `gnome-terminal` on your machine.
@@ -14,7 +14,7 @@ This will launch a `gnome-terminal` on your machine.
 
 After updating the issue is gone:
 ```
-$ git clone git@github.com:disconnect3d/git_clone_rce_calc.git --recursive
+$ git clone https://github.com/disconnect3d/git_clone_rce_calc.git --recursive
 Cloning into 'git_clone_rce_calc'...
 remote: Counting objects: 15, done.
 remote: Compressing objects: 100% (15/15), done.
