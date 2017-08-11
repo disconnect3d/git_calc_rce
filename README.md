@@ -9,10 +9,10 @@ git clone git@github.com:disconnect3d/git_clone_rce_calc.git --recursive
 The recursive part is crucial as git **must** try to clone the malicious git submodule url.
 This will launch a `gnome-terminal` on your machine.
 
-#### To be safe
+### To be safe
 **Upgrade your Git to 2.14.1 as stated in [git's release notes](https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.14.1.txt).**
 
-#### After updating the issue is gone:
+### After updating the issue is gone:
 ```
 $ git clone git@github.com:disconnect3d/git_clone_rce_calc.git --recursive
 Cloning into 'git_clone_rce_calc'...
