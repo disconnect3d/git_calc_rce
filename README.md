@@ -1,6 +1,6 @@
 # Git clone RCE
 
-This repo is an example of `git clone` vulnerability described in http://blog.recurity-labs.com/2017-08-10/scm-vulns
+This repo is an example of `git clone` vulnerability described in http://blog.recurity-labs.com/2017-08-10/scm-vulns using a git submodule.
 
 To see it in action, simply clone the repo using:
 ```
