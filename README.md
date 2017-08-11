@@ -1,4 +1,4 @@
-# Git clone RCE
+# Git clone RCE PoC repository
 
 This repo is an example of `git clone` vulnerability described in http://blog.recurity-labs.com/2017-08-10/scm-vulns using a git submodule.
 
@@ -27,3 +27,15 @@ Cloning into 'git_calc_rce'...
 fatal: strange hostname '-oProxyCommand=gnome-calculator' blocked
 fatal: clone of 'ssh://-oProxyCommand=gnome-calculator/wat' into submodule path 'git_calc_rce' failed
 ```
+
+### Changes that fix the problem
+
+You can see changes that fixed the problem in [230ce07d commit id e.g. in git mirror repo](  https://github.com/git/git/commit/230ce07d134f597a8107d3ed5d76d212ff90db70).
+
+Basically they have [introduced a check](https://github.com/git/git/commit/230ce07d134f597a8107d3ed5d76d212ff90db70#diff-c36199ef0fc86df61570de73eb0fde65R1324) which is called in some places:
+```c
+int looks_like_command_line_option(const char *str)
+ {
+ 	return str && str[0] == '-';
+ }
+ ```
